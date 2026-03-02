@@ -29,4 +29,23 @@ public class Biblioteca {
 
     }
 
+    /**
+     * Metodo privado quew busca la primera posicion libre en el catalogo
+     * @return -1 si no hay hueco libre o la posicion libre
+     */
+
+    private int buscarPrimerHuecoLibre(){
+        int posicionLibre = -1;
+        boolean seguirBuscando = true;
+
+        for(int i = 0; i < CANT_MAX_LIBROS && seguirBuscando; i++){
+            if(catalogo[i] == null){
+                posicionLibre = i;
+                seguirBuscando = false;
+            }
+
+        }
+        return posicionLibre;
+    }
+
 }
