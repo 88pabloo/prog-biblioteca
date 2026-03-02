@@ -103,4 +103,23 @@ public class Biblioteca {
 
     }
 
+    /**
+     * Actualiza el numero de paginas del libro con el id recibido
+     * @param idLibro id del libro
+     */
+
+    public updateNumPaginas (int idLibro){
+        boolean numPaginasActualizado;
+        Libro libro;
+
+        libro = findLibro(idLibro);
+
+        if(libro != null){
+            numPaginasActualizado = libro.updateNumPaginas(numPaginas);
+        }
+        return numPaginasActualizado;
+
+
+    }
+
 }
